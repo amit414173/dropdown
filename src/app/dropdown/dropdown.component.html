@@ -1,0 +1,9 @@
+<div class="custom-dropdown">
+    <input type="text" #dropdownInput class="dropdown-input" placeholder="Select an option"  value="{{selectedValue}}">
+    <ul class="dropdown-list" [hidden]="!showDropdown">
+        <li *ngFor="let option of seachedOptions" (click)="onSelect(option)">
+        {{ option }}
+        </li>
+        <li *ngIf="options.length === 0">Record not found</li>
+    </ul>
+</div>
